@@ -10,6 +10,7 @@ class TestEnglishToFrenchTranslation(unittest.TestCase):
         english_text = "Hello"
         english_to_french_translation = english_to_french(english_text)
         self.assertEqual("", "") # Test for null input for englishToFrench
+        self.assertNotEqual("", "Bonjour")
         self.assertEqual(english_to_french_translation, "Bonjour")
 
 class TestFrenchToEnglishTranslation(unittest.TestCase):
@@ -19,6 +20,7 @@ class TestFrenchToEnglishTranslation(unittest.TestCase):
         french_text = "Bonjour"
         french_to_english_translation = french_to_english(french_text)
         self.assertEqual("", "") # Test for null input for frenchToEnglish
+        self.assertNotEqual("", "Hello")
         self.assertEqual(french_to_english_translation, "Hello")
 
 if __name__ == '__main__':
